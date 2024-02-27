@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,6 +8,47 @@
     background-color: #222;
 } */
 
-#joy-foto {
-    backdrop-filter: brightness(100%);
+
+
+#body {
+    overflow-x: hidden;
+    background-color: #F9DA78;
+}
+
+#header a {
+    text-decoration: none;
+    
+    display: inline-block;
+    position: relative;
+}
+
+#header a::after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #000000;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+#header a:hover::after {
+    width: 100%; 
+    left: 0; 
+}
+
+    @keyframes carga {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+#header-div {
+    animation: 2s ease 0s 1 carga;
 }

@@ -5,6 +5,8 @@ export default {
     extend: {
       fontFamily: {
         Onest: "Onest",
+        bebas_Neue: ["Bebas Neue"],
+        pacifico: "Pacifico",
       },
     },
   },
