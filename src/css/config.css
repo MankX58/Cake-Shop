@@ -8,7 +8,12 @@
     background-color: #222;
 } */
 
+@layer components{
 
+    .card {
+        @apply 
+        h-[26rem] w-[18rem] bg-[#dabf67] text-center m-[1.5rem] rounded-[10px] hover:scale-110 transition overflow-auto overflow-x-hidden
+    }}
 
 #body {
     overflow-x: hidden;
@@ -52,3 +57,4 @@
 #header-div {
     animation: 2s ease 0s 1 carga;
 }
+
