@@ -12,7 +12,7 @@ export default function MainP() {
       <div className=" h-[40rem]" id="header-div">
         <div className="flex flex-col justify-center items-center mt-[1rem]">
           <img
-            src="./public/img/pastel_main.png"
+            src="./public/img/pastel_main.webp"
             alt=""
             class="w-[400px] h-[350px] ml-[2rem] mb-[1rem] right-[1rem] relative max-xl:w-[300px] max-xl:h-[250px]"
             id="pastel-main"
@@ -22,7 +22,7 @@ export default function MainP() {
           </h1>
         </div>
         <h1 className="relative top-[2.5rem] text-xl font-bold left-[1rem]">
-          MANKX´S SHOP
+          ManelGuvi300 Shop
         </h1>
         <p class=" mb-[.5rem] w-[50rem] p-[1rem] relative top-[2rem]">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque nihil
@@ -44,7 +44,6 @@ export default function MainP() {
           molestiae eum totam, quasi laborum voluptates! Optio ut similique
           officia!
         </p>
-        <p>lorem*10</p>
         <br />
         <div className="relative left-[1rem]">
           <Button />

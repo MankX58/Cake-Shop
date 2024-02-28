@@ -2,7 +2,7 @@ import React from "react";
 
 function Header() {
   return (
-    <header className=" w-full h-[6rem] bg-[#e6c660] border-b-[2px] border-black">
+    <header className=" w-[100%] h-[6rem] bg-[#e6c660] border-b-[2px] border-black">
       <div
         className="flex justify-end gap-[2rem] relative text-[#000000] text-lg top-[2rem] font-bold"
         id="header"
