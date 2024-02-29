@@ -12,8 +12,14 @@
 
     .card {
         @apply 
-        h-[26rem] w-[18rem] bg-[#dabf67] text-center m-[1.5rem] rounded-[10px] hover:scale-110 transition overflow-auto overflow-x-hidden
-    }}
+        h-[21rem] w-[18rem] bg-[#dabf67] text-center m-[1.5rem] rounded-[10px] hover:scale-110 transition overflow-auto overflow-x-hidden
+    }
+
+    .card_image {
+        @apply
+        h-[10.5rem] w-full
+    }
+}
 
 #body {
     overflow-x: hidden;

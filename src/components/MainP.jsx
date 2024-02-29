@@ -24,7 +24,7 @@ export default function MainP() {
             </h1>
           </h1>
         </div>
-        <section className="text-center items-center justify-center">
+        <section className="text-center items-center justify-center min-h-[35rem] h-auto">
           <h1 className="font-bebas_Neue font-bold text-[40px]">
             Nuestros Productos
           </h1>
@@ -33,17 +33,40 @@ export default function MainP() {
           {/* TARJETAS DE PRODUCTOS */}
           <section className="flex shrink-0 flex-wrap transition justify-center">
             <div className="card">
-              <img src="public\img\pastel_arequipe.jpg" className="" alt="" />
+              <img
+                src="public\img\pastel_coco.webp"
+                className="card_image"
+                alt="Pastel de coco"
+              />
               <h1>Pastel de arquipe</h1>
               <Button></Button>
             </div>
 
             <div className="card">
+              <img
+                src="public/img/pastel_fresa.jpg"
+                alt="Pastel de fresa"
+                className="card_image"
+              />
               <Button></Button>
             </div>
 
             <div className="card">
+              <img
+                src="public/img/pastel_chocolate.webp"
+                alt="Pastel de chocolate"
+                className="card_image"
+              />
               <Button></Button>
+            </div>
+
+            <div className="card">
+              <img
+                src="public\img\pastel_vainilla.jpg"
+                alt="Pastel de vainilla"
+                className="card_image"
+              />
+              <Button />
             </div>
           </section>
 
