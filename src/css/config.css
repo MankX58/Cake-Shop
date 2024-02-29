@@ -17,7 +17,7 @@
 
     .card_image {
         @apply
-        h-[10.5rem] w-full
+        h-[10.5rem] w-full object-cover
     }
 }
 
