@@ -17,7 +17,7 @@ export default function Products() {
             className="card_image"
             alt="Pastel de coco"
           />
-          <h1>Pastel de arequipe</h1>
+          <h1>Pastel de arequiape</h1>
           <Button></Button>
         </div>
 
