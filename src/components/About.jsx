@@ -2,8 +2,11 @@ import React from "react";
 
 export default function About() {
   return (
-    <div id="about" className="h-[40rem] relative">
-      <div className="text-center">
+    <div
+      id="about"
+      className="min-h-[40rem] h-auto relative  bg-[#e6c660] py-[10rem]"
+    >
+      <div className="text-center relative top-[0rem]">
         <h1 className="font-bebas_Neue font-bold text-[40px] mb-[2.5rem]">
           Sobre nosotros
         </h1>
@@ -12,7 +15,7 @@ export default function About() {
           alt=""
           className="float-right size-[20rem] relative bottom-[1rem] right-[9rem] ml-[3rem]"
         />
-        <div className="flex justify-center text-center relative left-[2rem]">
+        <div className="flex justify-center text-center relative left-[2rem] overflow-y-hidden">
           <p className="w-[45rem] relative text-left">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
             laborum quae provident natus placeat impedit unde adipisci, maxime

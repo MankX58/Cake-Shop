@@ -26,14 +26,14 @@
     background-color: #F9DA78;
 }
 
-#header a {
+#header .header_option {
     text-decoration: none;
     
     display: inline-block;
     position: relative;
 }
 
-#header a::after {
+#header .header_option::after {
   background: none repeat scroll 0 0 transparent;
   bottom: 0;
   content: "";
@@ -46,7 +46,7 @@
   width: 0;
 }
 
-#header a:hover::after {
+#header .header_option:hover::after {
     width: 100%; 
     left: 0; 
 }
@@ -62,5 +62,9 @@
     }
 #header-div {
     animation: 2s ease 0s 1 carga;
+}
+
+.header_option {
+    display: flex;
 }
 
