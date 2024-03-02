@@ -28,17 +28,7 @@ function Header() {
               <span className="">Iniciar Sesión</span>
             </a>
           </div>
-          <button
-            id="menu_burger"
-            onClick={function myFunction() {
-              var x = document.getElementsByClassName("header_option");
-              if (x.style.display === "block") {
-                x.style.display = "none";
-              } else {
-                x.style.display = "block";
-              }
-            }}
-          >
+          <button>
             <svg
               width="50px"
               height="50px"
