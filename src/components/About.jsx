@@ -10,13 +10,13 @@ export default function About() {
         <h1 className="font-bebas_Neue font-bold text-[40px] mb-[2.5rem]">
           Sobre nosotros
         </h1>
-        <div className="flex justify-center flex-row-reverse">
-        <img
-          src="public/img/logo.png"
-          alt=""
-          className=" size-[20rem] "
-        />
-          <p className="w-[40rem] relative text-left">
+        <div className="flex justify-center flex-row-reverse mx-[.5rem] max-lg:mx-[1rem]">
+          <img
+            src="public/img/logo.png"
+            alt=""
+            className=" size-[20rem] relative float-right max-lg:size-[14rem] max-lg:top-[2rem] max-md:top-[-.3rem] max-sm:size-[9rem]"
+          />
+          <p className="w-[40rem] relative text-[17px] text-left max-lg:text-[15px] max-md:text-[10px] max-sm:text-[9px]">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
             laborum quae provident natus placeat impedit unde adipisci, maxime
             ullam iste sit hic illo quos, odit, saepe vero. A, nobis placeat?

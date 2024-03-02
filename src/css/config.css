@@ -12,12 +12,12 @@
 
     .card {
         @apply 
-        h-[21rem] w-[18rem] bg-[#dabf67] text-center m-[1.5rem] rounded-[10px] hover:scale-110 transition overflow-auto overflow-x-hidden
+        h-[21rem] w-[18rem] bg-[#dabf67] text-center m-[1.5rem] rounded-[10px] hover:scale-110 transition overflow-auto overflow-x-hidden max-lg:h-[18rem] max-lg:w-[15rem] max-md:w-[12rem] max-md:h-[15rem]
     }
 
     .card_image {
         @apply
-        h-[10.5rem] w-full object-cover
+        h-[10.5rem] w-full object-cover max-lg:h-[8.5rem]
     }
 }
 
