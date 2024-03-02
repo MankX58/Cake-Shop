@@ -3,7 +3,7 @@ import Button from "./Button";
 
 export default function Products() {
   return (
-    <section className="text-center items-center justify-center min-h-[35rem] h-auto">
+    <section className="text-center items-center justify-center min-h-[35rem] h-auto" id="products">
       <h1 className="font-bebas_Neue font-bold text-[40px]">
         Nuestros Productos
       </h1>

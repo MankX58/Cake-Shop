@@ -12,16 +12,16 @@ function Header() {
             SHOP
           </h1>
           <div
-            className="relative right-[1rem] flex gap-[2rem] max-md:hidden"
+            className="relative right-[.5rem] flex gap-[2rem] max-md:hidden"
             id="links_header"
           >
-            <a href="" className="header_option ">
-              <span className="">Sobre Nosotros</span>
-            </a>
-            <a href="" className="header_option">
+            <a href="#products" className="header_option">
               <span>Nuestros Productos</span>
             </a>
-            <a href="" className="header_option ">
+            <a href="#about" className="header_option ">
+              <span className="">Sobre Nosotros</span>
+            </a>
+            <a href="#contact" className="header_option ">
               <span>Contacto</span>
             </a>
             <a href="" className="header_option ">

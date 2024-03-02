@@ -4,7 +4,7 @@ export default function About() {
   return (
     <div
       id="about"
-      className="min-h-[40rem] h-auto relative  bg-[#e6c660] py-[10rem]"
+      className="min-h-[40rem] h-auto relative  bg-[#e6c660] py-[7rem]"
     >
       <div className="text-center relative top-[0rem]">
         <h1 className="font-bebas_Neue font-bold text-[40px] mb-[2.5rem]">
