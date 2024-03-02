@@ -1,12 +1,6 @@
 import React from "react";
-import Button from "./Button";
-import Contact from "./Contact";
+import BackToTopButton from "./BttButton";
 
-<img
-  src="./public/img/joy.png"
-  alt="tumalakaaskfsk"
-  className="w-[700px] h-[500px] float-right"
-/>;
 export default function MainP() {
   return (
     <div className=" h-auto" id="header-div">
@@ -24,6 +18,7 @@ export default function MainP() {
           </h1>
         </h1>
       </div>
+      <BackToTopButton></BackToTopButton>
     </div>
   );
 }
