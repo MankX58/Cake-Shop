@@ -8,12 +8,12 @@ export default function MainP() {
         <img
           src="./public/img/pastel_main.webp"
           alt=""
-          class="w-[400px] h-[350px] ml-[2rem] right-[1rem] relative max-xl:w-[300px] max-xl:h-[250px] max-lg:w-[250px] max-lg:h-[220px] max-lg:top-[0rem] max-md:top-[0rem] max-md:w-[180px] max-md:h-[150px] max-sm:ml-[5rem] max-sm:right-[3.8rem]"
+          class="w-[400px] h-[350px] ml-[2rem] right-[1rem] relative max-xl:w-[300px] max-xl:h-[250px] max-lg:w-[250px] max-lg:h-[220px] max-lg:top-[0rem] max-md:top-[0rem] max-md:w-[180px] max-md:h-[150px] max-sm:ml-[5rem] max-sm:right-[1.7rem]"
           id="pastel-main"
         />
-        <h1 className="font-bebas_Neue text-[90px] max-xl:text-[80px] max-md:text-[60px] max-sm:text-[40px] max-sm:mr-[3rem]">
+        <h1 className="font-bebas_Neue text-[90px] max-xl:text-[80px] max-md:text-[60px] max-sm:text-[40px] max-sm:mr-[3rem] max-sm:left-[2rem] relative">
           ¡BIENVENIDO A{" "}
-          <h1 className="font-pacifico text-[60px] font-bold max-md:text-[40px] max-sm:text-[25px] max max-sm:mr-[3rem] max-sm:left-[1.4rem] relative">
+          <h1 className="font-pacifico text-[60px] font-bold max-md:text-[40px] max-sm:text-[25px] max max-sm:mr-[3rem] max-sm:left-[1.5rem] relative">
             MANKX´S SHOP!
           </h1>
         </h1>

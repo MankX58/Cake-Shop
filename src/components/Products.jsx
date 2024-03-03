@@ -32,7 +32,11 @@ export default function Products() {
           src="public\img\pastel_vainilla.jpg"
         />
         <Card_Product title="Pandebono" src="public\img\pandebono.jpg" />
-        <Card_Product />
+        <Card_Product title="Torta de oreo" src="public\img\Torta_oreo.png" />
+        <Card_Product
+          title="Torta venezolana"
+          src="public\img\Torta_venezolana.jpg"
+        />
       </section>
 
       {/* ///////////////////// */}

@@ -25,7 +25,7 @@ function BackToTopButton() {
     <div className="App">
       {backToTopButton && (
         <button
-          className="bg-[#b99f49] border-solid border-[1px] border-black fixed z-40 left-[90%] top-[83%] w-[6rem] h-[6rem] rounded-[100%] max-md:hidden"
+          className="bg-[#b99f49] border-solid border-[1px] border-black fixed z-40 left-[90%] top-[83%] w-[4rem] h-[4rem] rounded-[100%] max-md:hidden hover:scale-110 transition"
           id="scrollb"
           onClick={scrollUp}
         >
@@ -33,9 +33,9 @@ function BackToTopButton() {
             viewBox="0 0 1024 1024"
             xmlns="http://www.w3.org/2000/svg"
             fill="#000000"
-            width="5rem"
-            height="5rem"
-            className="relative left-[5px] top-[2px] animat"
+            width="3rem"
+            height="3rem"
+            className="relative left-[6px] top-[2px] animat"
           >
             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
             <g
