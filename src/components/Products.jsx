@@ -29,12 +29,12 @@ export default function Products() {
       {/* TARJETAS DE PRODUCTOS */}
       <section className="flex shrink-0 flex-wrap transition justify-center mb-[4.5rem]">
         <div className="">
-          <div className="flex flex-row shrink-0 flex-wrap gap-4 justify-center">
+          <div className="flex flex-row shrink-0 flex-wrap gap-8 justify-center">
             {products.map((product) => (
               <div
                 key={product.id}
                 className="p-[5px] bg-[#cfb253] rounded-[10px] w-[18rem] h-[21rem] max-lg:h-[18rem] max-lg:w-[15rem] max-md:w-[12rem] max-md:h-[15rem]
-              }"
+              } hover:scale-110 transition"
               >
                 <img
                   src={product.src}

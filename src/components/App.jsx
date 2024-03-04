@@ -1,14 +1,18 @@
-import React, { useState } from "react";
+import React from "react";
+import { useState } from "react";
+import ReactDOM from "react-dom/client";
+import MainP from "./MainP.jsx";
+import About from "./About.jsx";
+import Contact from "./Contact.jsx";
+import Header from "./Header.jsx";
+import Products from "./Products.jsx";
+import { products } from "../data.js";
+import "../css/style.css";
+import "../css/config.css";
 
-function App() {
+export default function App() {
   const [cart, setCart] = useState([]);
   const [total, setTotal] = useState(0);
-
-  const products = [
-    { id: 1, name: "Product 1", price: 10 },
-    { id: 2, name: "Product 2", price: 20 },
-    { id: 3, name: "Product 3", price: 30 },
-  ];
 
   const addToCart = (product) => {
     setCart([...cart, product]);
@@ -21,29 +25,12 @@ function App() {
   };
 
   return (
-    <div className="container w-[40rem] bg-[red] mx-auto">
-      {/* Carrito */}
-      <div className="mt-8 ">
-        <h2 className="text-lg font-bold">Carrito</h2>
-        <ul className="list-disc pl-4">
-          {cart.map((product) => (
-            <li key={product.id} className="flex justify-between items-center">
-              <span>{product.name}</span>
-              <button
-                onClick={() => removeFromCart(product)}
-                className="text-red-500"
-              >
-                Eliminar
-              </button>
-            </li>
-          ))}
-        </ul>
-        <div className="mt-4">
-          <h3 className="text-lg font-bold">Total: ${total}</h3>
-        </div>
-      </div>
+    <div className="flex-row">
+      <Header />
+      <MainP />
+      <Products />
+      <About />
+      <Contact />
     </div>
   );
 }
-
-export default App;

@@ -1,6 +1,15 @@
 import React from "react";
+import { useState } from "react";
 
 function Header() {
+  const [cart, setCart] = useState([]);
+  const [total, setTotal] = useState(0);
+
+  const removeFromCart = (productToRemove) => {
+    setCart(cart.filter((product) => product.id !== productToRemove.id));
+    setTotal(total - productToRemove.price);
+  };
+
   return (
     <div>
       <header className=" w-[100%] h-[6rem] bg-[#e6c660] border-b-[2px] border-black">
@@ -99,6 +108,31 @@ function Header() {
               </g>
             </svg>
           </button>
+        </div>
+        <div className="container w-[15rem] right-[4rem] top-[5.7rem] rounded-[10px] bg-[red] mx-auto absolute">
+          {/* Carrito */}
+          <div className="text-center justify-center items-center bg-[#e6c660] border-solid border-[2px] border-black rounded-[10px]">
+            <h2 className="text-lg font-bold">Carrito</h2>
+            <ul className="list-disc pl-4">
+              {cart.map((product) => (
+                <li
+                  key={product.id}
+                  className="flex justify-between items-center"
+                >
+                  <span>{product.name}</span>
+                  <button
+                    onClick={() => removeFromCart(product)}
+                    className="text-red-500"
+                  >
+                    Eliminar
+                  </button>
+                </li>
+              ))}
+            </ul>
+            <div className="mt-4">
+              <h3 className="text-lg font-bold">Total: ${total}</h3>
+            </div>
+          </div>
         </div>
       </header>
     </div>
