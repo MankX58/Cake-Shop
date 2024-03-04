@@ -75,7 +75,7 @@ html{
 #scrollb {
     animation: bounce .5s backwards
 }
-
+/* 
 @keyframes bounce {
     0%, 100% {       
         transform: none;
@@ -85,5 +85,15 @@ html{
     50% {
         transform: translateY(-25%);
         animation-timing-function: cubic-bezier(0.8,0,1,1);
+    }
+} */
+
+@keyframes bounce {
+    0% {
+        scale: 0%;
+    }
+
+    100% {
+        scale: 100%;
     }
 }
