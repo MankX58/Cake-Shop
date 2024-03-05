@@ -104,7 +104,10 @@ function Header({ cart, removeFromCart, total }) {
           </button>
         </div>
         {showCart && (
-          <div className="container w-[15rem] right-[4rem] top-[5.7rem] rounded-[10px] bg-[red] mx-auto absolute z-30">
+          <div
+            className="container w-[15rem] right-[4rem] top-[5.7rem] rounded-[10px] bg-[red] mx-auto absolute z-30 transition"
+            id="cart_container"
+          >
             {/* Carrito */}
             <div className="text-center justify-center items-center bg-[#e6c660] border-solid border-[2px] border-black rounded-[10px] px-[.5rem]">
               <h2 className="text-lg font-bold">Carrito</h2>

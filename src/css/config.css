@@ -75,6 +75,10 @@ html{
 #scrollb {
     animation: bounce .5s backwards
 }
+
+#cart_container {
+    animation: bounce .5s backwards;
+}
 /* 
 @keyframes bounce {
     0%, 100% {       
