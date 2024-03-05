@@ -20,15 +20,31 @@ export default function App() {
   };
 
   const removeFromCart = (productToRemove) => {
-    setCart(cart.filter((product) => product.id !== productToRemove.id));
-    setTotal(total - productToRemove.price);
+    const index = cart.findIndex(
+      (product) => product.id === productToRemove.id
+    );
+    if (index !== -1) {
+      const newCart = [...cart];
+      newCart.splice(index, 1);
+      setCart(newCart);
+      setTotal(total - productToRemove.price);
+    }
   };
 
   return (
     <div className="flex-row">
-      <Header />
+      <Header cart={cart} removeFromCart={removeFromCart} total={total} />
       <MainP />
-      <Products />
+      <div className="flex justify-center">
+        <h1 className="font-bebas_Neue font-bold text-[40px] mb-[1.5rem] text-cemter}">
+          Nuestros Productos
+        </h1>
+      </div>
+      <div className="flex flex-row gap-[2rem] flex-wrap justify-center mb-0 pb-0">
+        {products.map((product) => (
+          <Products key={product.id} product={product} addToCart={addToCart} />
+        ))}
+      </div>
       <About />
       <Contact />
     </div>

@@ -1,14 +1,8 @@
 import React from "react";
 import { useState } from "react";
 
-function Header() {
-  const [cart, setCart] = useState([]);
-  const [total, setTotal] = useState(0);
-
-  const removeFromCart = (productToRemove) => {
-    setCart(cart.filter((product) => product.id !== productToRemove.id));
-    setTotal(total - productToRemove.price);
-  };
+function Header({ cart, removeFromCart, total }) {
+  const [showCart, setShowCart] = useState(false);
 
   return (
     <div>
@@ -37,9 +31,7 @@ function Header() {
               <span className="">Iniciar Sesión</span>
             </a>
             <div
-              onClick={() => {
-                return alert("hola");
-              }}
+              onClick={() => setShowCart(!showCart)}
               className="cursor-pointer hover:scale-110 transition"
             >
               <svg
@@ -66,7 +58,9 @@ function Header() {
                 </g>
               </svg>
               <div>
-                <span className="absolute">1</span>
+                <span className="absolute">
+                  {cart.length > 0 && cart.length}
+                </span>
               </div>
             </div>
           </div>
@@ -109,31 +103,33 @@ function Header() {
             </svg>
           </button>
         </div>
-        <div className="container w-[15rem] right-[4rem] top-[5.7rem] rounded-[10px] bg-[red] mx-auto absolute">
-          {/* Carrito */}
-          <div className="text-center justify-center items-center bg-[#e6c660] border-solid border-[2px] border-black rounded-[10px]">
-            <h2 className="text-lg font-bold">Carrito</h2>
-            <ul className="list-disc pl-4">
-              {cart.map((product) => (
-                <li
-                  key={product.id}
-                  className="flex justify-between items-center"
-                >
-                  <span>{product.name}</span>
-                  <button
-                    onClick={() => removeFromCart(product)}
-                    className="text-red-500"
+        {showCart && (
+          <div className="container w-[15rem] right-[4rem] top-[5.7rem] rounded-[10px] bg-[red] mx-auto absolute z-30">
+            {/* Carrito */}
+            <div className="text-center justify-center items-center bg-[#e6c660] border-solid border-[2px] border-black rounded-[10px] px-[.5rem]">
+              <h2 className="text-lg font-bold">Carrito</h2>
+              <ul className="list-disc">
+                {cart.map((product) => (
+                  <li
+                    key={product.id}
+                    className="flex justify-between items-center"
                   >
-                    Eliminar
-                  </button>
-                </li>
-              ))}
-            </ul>
-            <div className="mt-4">
-              <h3 className="text-lg font-bold">Total: ${total}</h3>
+                    <span>{product.title}</span>
+                    <button
+                      onClick={() => removeFromCart(product)}
+                      className="text-red-500"
+                    >
+                      Eliminar
+                    </button>
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-4">
+                <h3 className="text-lg font-bold">Total: ${total}</h3>
+              </div>
             </div>
           </div>
-        </div>
+        )}
       </header>
     </div>
   );
