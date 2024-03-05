@@ -1,8 +1,12 @@
 import React from "react";
 import { useState } from "react";
 
-function Header({ cart, removeFromCart, total }) {
+function Header({ cart, decrementQuantity, total }) {
   const [showCart, setShowCart] = useState(false);
+  const totalQuantity = cart.reduce(
+    (acc, product) => acc + product.quantity,
+    0
+  );
 
   return (
     <div>
@@ -58,9 +62,11 @@ function Header({ cart, removeFromCart, total }) {
                 </g>
               </svg>
               <div>
-                <span className="absolute">
-                  {cart.length > 0 && cart.length}
-                </span>
+                {cart.map((product) => (
+                  <span className="absolute right-[-1rem] rounded-[100%] border-[1px] border-solid border-black w-[1.5rem] h-[1.5rem] items-center text-center justify-center content-center flex align-middle top-[1.3rem]">
+                    {totalQuantity}
+                  </span>
+                ))}
               </div>
             </div>
           </div>
@@ -105,7 +111,7 @@ function Header({ cart, removeFromCart, total }) {
         </div>
         {showCart && (
           <div
-            className="container w-[15rem] right-[4rem] top-[5.7rem] rounded-[10px] bg-[red] mx-auto absolute z-30 transition"
+            className="container w-[15rem] right-[1rem] top-[5.4rem] rounded-[10px] mx-auto absolute z-30 transition "
             id="cart_container"
           >
             {/* Carrito */}
@@ -117,9 +123,12 @@ function Header({ cart, removeFromCart, total }) {
                     key={product.id}
                     className="flex justify-between items-center"
                   >
-                    <span>{product.title}</span>
+                    <span>
+                      {product.title}{" "}
+                      {product.quantity > 1 && `(${product.quantity})`}
+                    </span>
                     <button
-                      onClick={() => removeFromCart(product)}
+                      onClick={() => decrementQuantity(product)}
                       className="text-red-500"
                     >
                       Eliminar

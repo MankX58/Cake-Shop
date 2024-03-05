@@ -36,4 +36,11 @@ export const products = [
       price: 10,
       src: "public/img/Torta_venezolana.jpg",
     },
+
+    {
+      id: 8,
+      title: "Alaro",
+      price: 50,
+      src: "#"
+    }
   ];

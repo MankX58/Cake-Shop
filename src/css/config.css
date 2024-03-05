@@ -77,7 +77,7 @@ html{
 }
 
 #cart_container {
-    animation: bounce .5s backwards;
+    animation: bounce .3s backwards;
 }
 /* 
 @keyframes bounce {

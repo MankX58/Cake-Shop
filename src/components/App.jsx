@@ -15,27 +15,45 @@ export default function App() {
   const [total, setTotal] = useState(0);
 
   const addToCart = (product) => {
-    setCart([...cart, product]);
+    const existingProductIndex = cart.findIndex((p) => p.id === product.id);
+    if (existingProductIndex !== -1) {
+      // El producto ya está en el carrito, actualizar la cantidad y el precio total
+      const updatedCart = [...cart];
+      const existingProduct = updatedCart[existingProductIndex];
+      existingProduct.quantity += 1;
+      existingProduct.totalPrice += existingProduct.price;
+      setCart(updatedCart);
+    } else {
+      // El producto no está en el carrito, agregarlo al carrito
+      setCart([
+        ...cart,
+        { ...product, quantity: 1, totalPrice: product.price },
+      ]);
+    }
     setTotal(total + product.price);
   };
 
-  const removeFromCart = (productToRemove) => {
-    const index = cart.findIndex(
-      (product) => product.id === productToRemove.id
-    );
-    if (index !== -1) {
-      const newCart = [...cart];
-      newCart.splice(index, 1);
-      setCart(newCart);
-      setTotal(total - productToRemove.price);
+  const decrementQuantity = (product) => {
+    const existingProductIndex = cart.findIndex((p) => p.id === product.id);
+    if (existingProductIndex !== -1) {
+      const updatedCart = [...cart];
+      const existingProduct = updatedCart[existingProductIndex];
+      if (existingProduct.quantity === 1) {
+        updatedCart.splice(existingProductIndex, 1); // Si la cantidad es 1, eliminar completamente el producto
+      } else {
+        existingProduct.quantity -= 1;
+        existingProduct.totalPrice -= existingProduct.price;
+      }
+      setCart(updatedCart);
+      setTotal(total - product.price);
     }
   };
 
   return (
     <div className="flex-row">
-      <Header cart={cart} removeFromCart={removeFromCart} total={total} />
+      <Header cart={cart} decrementQuantity={decrementQuantity} total={total} />
       <MainP />
-      <div className="flex justify-center">
+      <div className="flex justify-center" id="products">
         <h1 className="font-bebas_Neue font-bold text-[40px] mb-[1.5rem] text-cemter}">
           Nuestros Productos
         </h1>

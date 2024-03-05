@@ -5,10 +5,7 @@ import { products } from "../data";
 export default function Products({ product, addToCart }) {
   return (
     <>
-      <section
-        className="text-center items-center justify-center min-h-[23rem] h-auto"
-        id="products"
-      >
+      <section className="text-center items-center justify-center min-h-[23rem] h-auto">
         {/* ///////////////////// */}
         {/* TARJETAS DE PRODUCTOS */}
         <section className="flex shrink-0 flex-wrap transition justify-center ">
@@ -22,7 +19,7 @@ export default function Products({ product, addToCart }) {
                 <img
                   src={product.src}
                   className="card_image rounded-t-[10px]"
-                  alt="Pastel de coco"
+                  alt={product.title}
                 />
                 <h1>{product.title}</h1>
                 <p className="text-gray-500">${product.price}</p>
