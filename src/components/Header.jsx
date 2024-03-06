@@ -20,20 +20,20 @@ function Header({ cart, decrementQuantity, total }) {
             SHOP
           </h1>
           <div
-            className="relative right-[.5rem] flex gap-[1.3rem] max-md:hidden text-[19px]"
+            className="relative right-[.5rem] flex gap-[1.3rem] text-[19px]"
             id="links_header"
           >
             <a href="#products" className="header_option">
-              <span>Productos</span>
+              <span className="max-md:hidden">Productos</span>
             </a>
             <a href="#about" className="header_option ">
-              <span className="">Sobre Nosotros</span>
+              <span className="max-md:hidden">Sobre Nosotros</span>
             </a>
             <a href="#contact" className="header_option ">
-              <span>Contacto</span>
+              <span className="max-md:hidden">Contacto</span>
             </a>
             <a href="" className="header_option">
-              <span className="">Iniciar Sesión</span>
+              <span className="max-md:hidden">Iniciar Sesión</span>
             </a>
             <div
               onClick={() => setShowCart(!showCart)}
