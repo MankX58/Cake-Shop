@@ -21,11 +21,11 @@ export default function Products({ product, addToCart }) {
                   className="card_image rounded-t-[10px]"
                   alt={product.title}
                 />
-                <h1>{product.title}</h1>
-                <p className="text-gray-500">${product.price}</p>
+                <h1 className="font-bold">{product.title}</h1>
+                <p className="">${product.price}</p>
                 <button
                   onClick={() => addToCart(product)}
-                  className="bg-blue-500 text-white py-2 px-4 mt-4 rounded hover:bg-blue-600"
+                  className="bg-[#927d38] text-white py-2 px-4 mt-4 rounded hover:bg-[#77662c] transition"
                 >
                   Agregar al carrito
                 </button>

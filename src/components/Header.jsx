@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 
 function Header({ cart, decrementQuantity, total }) {
   const [showCart, setShowCart] = useState(false);
@@ -139,6 +140,27 @@ function Header({ cart, decrementQuantity, total }) {
               <div className="mt-4">
                 <h3 className="text-lg font-bold">Total: ${total}</h3>
               </div>
+
+              <PayPalScriptProvider
+                options={{
+                  clientId:
+                    "Ab9jWaSIfheo5JOkk5l-nOBmpQ8YBwAJECM4f5hlKoCvcunY-u0x6qN2-1FGsUoa5x7mRZJXUYkm8B_g",
+                }}
+              >
+                <div id="paypal-button-container" className="mt-[1rem]"></div>
+                <PayPalButtons
+                  createOrder={(data, actions) => {
+                    return actions.order.create({
+                      purchase_units: [{ amount: { value: total } }],
+                    });
+                  }}
+                  onApprove={(data, actions) => {
+                    return actions.order.capture().then(function (details) {
+                      alert("transaction complete");
+                    });
+                  }}
+                />
+              </PayPalScriptProvider>
             </div>
           </div>
         )}

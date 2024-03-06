@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import ReactDOM from "react-dom/client";
+import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 import MainP from "./MainP.jsx";
 import About from "./About.jsx";
 import Contact from "./Contact.jsx";
@@ -50,21 +51,31 @@ export default function App() {
   };
 
   return (
-    <div className="flex-row">
-      <Header cart={cart} decrementQuantity={decrementQuantity} total={total} />
-      <MainP />
-      <div className="flex justify-center" id="products">
-        <h1 className="font-bebas_Neue font-bold text-[40px] mb-[1.5rem] text-cemter}">
-          Nuestros Productos
-        </h1>
+    <>
+      <div className="flex-row">
+        <Header
+          cart={cart}
+          decrementQuantity={decrementQuantity}
+          total={total}
+        />
+        <MainP />
+        <div className="flex justify-center" id="products">
+          <h1 className="font-bebas_Neue font-bold text-[40px] mb-[1.5rem] text-cemter}">
+            Nuestros Productos
+          </h1>
+        </div>
+        <div className="flex flex-row gap-[2rem] flex-wrap justify-center mb-0 pb-0">
+          {products.map((product) => (
+            <Products
+              key={product.id}
+              product={product}
+              addToCart={addToCart}
+            />
+          ))}
+        </div>
+        <About />
+        <Contact />
       </div>
-      <div className="flex flex-row gap-[2rem] flex-wrap justify-center mb-0 pb-0">
-        {products.map((product) => (
-          <Products key={product.id} product={product} addToCart={addToCart} />
-        ))}
-      </div>
-      <About />
-      <Contact />
-    </div>
+    </>
   );
 }
