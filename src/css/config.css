@@ -101,3 +101,7 @@ html{
         scale: 100%;
     }
 }
+
+#menu_l {
+    animation: backwards .3s bounce;
+}

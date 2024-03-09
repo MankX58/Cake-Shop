@@ -25,7 +25,7 @@ function BackToTopButton() {
     <div className="App">
       {backToTopButton && (
         <button
-          className="bg-[#b99f49] border-solid border-[1px] border-black fixed z-40 left-[90%] top-[83%] w-[4rem] h-[4rem] rounded-[100%] max-md:hidden hover:scale-110 transition"
+          className="bg-[#b99f49] border-solid border-[1px] border-black fixed z-40 left-[90%] top-[83%] w-[4rem] h-[4rem] rounded-[100%] max-md:left-[85%] hover:scale-110 transition"
           id="scrollb"
           onClick={scrollUp}
         >

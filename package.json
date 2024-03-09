@@ -3,16 +3,20 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://mankx58.github.io/Cake-Shop",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "scanTailwind": "tailwindcss -i src/css/config.css -o src/css/style.css --watch"
+    "scanTailwind": "tailwindcss -i src/css/config.css -o src/css/style.css --watch",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@paypal/react-paypal-js": "^8.1.4",
     "aws-sdk": "^2.1571.0",
+    "gh-pages": "^6.1.1",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-normalize": "^10.0.1",
     "postcss-preset-env": "^9.3.0",
