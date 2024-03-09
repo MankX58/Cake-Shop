@@ -136,7 +136,7 @@ function Header({ cart, decrementQuantity, total }) {
                 } absolute right-[1rem] top-[3rem] md:hidden bg-[#e6c660] py-[.5rem] border-solid rounded-[10px] border-black border-[2px] w-[13rem] z-50 flex justify-center text-center`}
                 id="menu_l"
               >
-                <ul className="flex flex-col-reverse justify-center">
+                <ul className="flex flex-col justify-center">
                   <a href="#products">
                     <li className="mb-[.3rem] hover:bg-[#7c6f2848] transition py-[.1rem] px-[.5rem]">
                       Productos
