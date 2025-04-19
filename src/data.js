@@ -23,7 +23,12 @@ export const products = [
     price: 5,
     src: "https://i.ibb.co/CpmbWgVB/pastel-vainilla.jpg",
   },
-  { id: 5, title: "Pandebono", price: 1, src: "public/img/pandebono.jpg" },
+  {
+    id: 5,
+    title: "Pandebono",
+    price: 1,
+    src: "https://i.ibb.co/vxQ4rh70/pandebono.jpg",
+  },
   {
     id: 6,
     title: "Torta de oreo",
