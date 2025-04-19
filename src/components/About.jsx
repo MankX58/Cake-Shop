@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function About() {
   return (
     <div
@@ -12,7 +10,7 @@ export default function About() {
         </h1>
         <div className="flex justify-center flex-row-reverse mx-[.5rem] max-lg:mx-[1rem] max-md:flex-col-reverse items-center">
           <img
-            src="public/img/logo.png"
+            src="https://i.ibb.co/35FVxGbN/logo.png"
             alt=""
             className=" size-[20rem] relative float-right max-lg:size-[14rem] max-lg:top-[2rem] "
           />

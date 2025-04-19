@@ -1,4 +1,3 @@
-import React from "react";
 import { useEffect, useState } from "react";
 
 function BackToTopButton() {
@@ -37,11 +36,11 @@ function BackToTopButton() {
             height="3rem"
             className="relative left-[6px] top-[2px] animat"
           >
-            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
             <g
               id="SVGRepo_tracerCarrier"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             ></g>
             <g id="SVGRepo_iconCarrier">
               <path
